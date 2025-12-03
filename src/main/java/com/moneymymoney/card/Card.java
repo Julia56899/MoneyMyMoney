@@ -1,4 +1,5 @@
-package com.moneymymoney.user;
+package com.moneymymoney.card;
+import com.moneymymoney.user.User;
 import jakarta.persistence.*;
 
 @Entity

@@ -1,5 +1,4 @@
-package com.moneymymoney.user;
-import jakarta.persistence.ManyToOne;
+package com.moneymymoney.transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

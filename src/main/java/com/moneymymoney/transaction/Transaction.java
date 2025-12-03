@@ -1,5 +1,7 @@
-package com.moneymymoney.user;
+package com.moneymymoney.transaction;
 
+import com.moneymymoney.card.Card;
+import com.moneymymoney.category.ExpenseCategory;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
@@ -21,12 +23,12 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-private CategoryRashodov category;
+private ExpenseCategory category;
     private String description;
 
 public Transaction() {}
     //контрукторы зис обязательно
-    public Transaction(Double sum, String description, LocalDate date, String type, Card card, CategoryRashodov category) {
+    public Transaction(Double sum, String description, LocalDate date, String type, Card card, ExpenseCategory category) {
         this.sum = sum;
         this.description = description;
         this.date = date;
@@ -63,10 +65,10 @@ public Transaction() {}
     public void setDescription(String description) {
         this.description = description;
     }
-    public CategoryRashodov getCategory() {
+    public ExpenseCategory getCategory() {
         return category;
     }
-    public void setCategory(CategoryRashodov category) {
+    public void setCategory(ExpenseCategory category) {
         this.category = category;
     }
     }

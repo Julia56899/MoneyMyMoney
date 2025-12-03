@@ -1,4 +1,4 @@
-package com.moneymymoney.user.UserRegistration;
+package com.moneymymoney.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package com.moneymymoney.user;
+package com.moneymymoney.transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 

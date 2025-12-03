@@ -2,8 +2,9 @@ package com.moneymymoney.user;
 //тут будут лежать "данные из базы" - как таблицы в бд
 //здесь будет не форма регистрации а скелет пользователя в системе
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.moneymymoney.card.Card;
 import jakarta.persistence.*;
-import com.moneymymoney.user.Card;
+
 import java.util.List;
 
 @Entity

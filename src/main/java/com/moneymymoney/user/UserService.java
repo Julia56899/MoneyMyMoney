@@ -1,6 +1,7 @@
 package com.moneymymoney.user;
+import com.moneymymoney.card.Card;
+import com.moneymymoney.card.CardRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import com.moneymymoney.user.UserRegistration.DTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

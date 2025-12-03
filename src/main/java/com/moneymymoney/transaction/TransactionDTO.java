@@ -1,4 +1,4 @@
-package com.moneymymoney.user;
+package com.moneymymoney.transaction;
 
 public class TransactionDTO {
     private Double sum;

@@ -1,7 +1,12 @@
-package com.moneymymoney.user;
+package com.moneymymoney.transaction;
 //в сервисе у меня будет добавление операции, расчет баланса карты, получить все  операции по карте
 import java.util.HashMap;
 import java.util.List;
+
+import com.moneymymoney.card.Card;
+import com.moneymymoney.card.CardRepository;
+import com.moneymymoney.category.CategoryExpenseRepository;
+import com.moneymymoney.category.ExpenseCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
@@ -10,12 +15,12 @@ import java.util.Map;
 public class TransactionService {
     private final TransactionRepository transactionRepository;
     private final CardRepository cardRepository;
-    private final CategoryRashodovRepository categoryRashodovRepository;
+    private final CategoryExpenseRepository categoryRashodovRepository;
 
     @Autowired
     public TransactionService(TransactionRepository transactionRepository,
                               CardRepository cardRepository,
-                              CategoryRashodovRepository categoryRashodovRepository) {
+                              CategoryExpenseRepository categoryRashodovRepository) {
 
         this.transactionRepository = transactionRepository;
         this.cardRepository = cardRepository;
@@ -30,7 +35,7 @@ public class TransactionService {
 //находим карту
         Card card = cardRepository.findById(cardId).orElseThrow(() -> new RuntimeException("Card not found"));
 
-        CategoryRashodov categoryRashodov = categoryRashodovRepository.findById(categoryId).orElseThrow(() -> new RuntimeException("Category not found"));
+        ExpenseCategory categoryRashodov = categoryRashodovRepository.findById(categoryId).orElseThrow(() -> new RuntimeException("Category not found"));
         //создаем транзакцию
         Transaction transaction = new Transaction();
         transaction.setSum(sum);

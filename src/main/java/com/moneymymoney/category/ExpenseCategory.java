@@ -1,9 +1,9 @@
-package com.moneymymoney.user;
+package com.moneymymoney.category;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "categories")
-public class CategoryRashodov {
+public class ExpenseCategory {
 @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long id;
@@ -11,9 +11,9 @@ private String name;
 private String type;
 private String color;
 
-    public CategoryRashodov() {}
+    public ExpenseCategory() {}
 //конструкторы
-    public CategoryRashodov(String name, String type, String color) {
+    public ExpenseCategory(String name, String type, String color) {
         this.name = name;
         this.type = type;
         this.color = color;
