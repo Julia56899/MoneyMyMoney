@@ -22,7 +22,7 @@ public class User {
     private String password;
 
     //связь с картами
-    @OneToMany (mappedBy = "com/moneymymoney/user",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany (mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JsonIgnore
     private List<Card> cards; //список карт
 
