@@ -72,3 +72,4 @@ public class Transaction {
         this.category = category;
     }
 }
+//заметка

@@ -58,3 +58,4 @@ public class TransactionDTO {
         this.categoryId = categoryId;
     }
 }
+//заметка гит на трназактион дто 
