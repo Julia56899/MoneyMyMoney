@@ -117,6 +117,15 @@ public class TransactionApiTest {
                 .statusCode(200);
     }
 
+    @Test
+    void categoryIncome_testOfCategoryIncome() {
+        given()
+                .when()
+                .get("/transactions/stats/income/{cardId}", cardId)
+                .then()
+                .statusCode(200);
+    }
+
 
 }
 
