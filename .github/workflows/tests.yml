@@ -1,0 +1,19 @@
+name: Tests            # имя пайплайна, отображается во вкладке Actions
+
+on:                     # когда запускать
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:                 # название задачи
+    runs-on: ubuntu-latest   # на какой виртуалке гонять
+
+    steps:
+      - uses: actions/checkout@v4      # скачать код репозитория
+      - uses: actions/setup-java@v4    # поставить Java
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - run: mvn test -Dspring.profiles.active=test   # сама команда
