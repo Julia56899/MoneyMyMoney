@@ -149,7 +149,7 @@ public class TransactionControllerTest {
         when(transactionService.getCategoryStatistics(1L)).thenReturn(testMap);
 
         //вызываем эндпоинт
-        mockMvc.perform(get("/transactions/transactions/stats/expense/1"))
+        mockMvc.perform(get("/transactions/stats/expense/1"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.Еда").value(1000.0))
                 .andExpect(jsonPath("$.Кино").value(200.0));
@@ -171,7 +171,7 @@ public class TransactionControllerTest {
         when(transactionService.getCategoryStatisticsTwo(1L)).thenReturn(testMap);
 
         //вызываем эндпоинт
-        mockMvc.perform(get("/transactions/transactions/stats/income/1"))
+        mockMvc.perform(get("/transactions/stats/income/1"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.Фриланс").value(5000.0))
                 .andExpect(jsonPath("$.Зарплата").value(3000.0));
