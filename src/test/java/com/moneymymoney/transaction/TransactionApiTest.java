@@ -88,6 +88,8 @@ public class TransactionApiTest {
 
     }
 
+
+
     @Test
     void cardBalance_testOfGetCardBalance() {
         given()

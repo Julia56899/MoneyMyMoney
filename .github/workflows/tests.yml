@@ -17,3 +17,16 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - run: mvn test -Dspring.profiles.active=test   # сама команда
+
+
+  deploy:
+          needs: test
+          if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+          runs-on: ubuntu-latest
+          steps:
+            - name: Trigger Render deploy
+              run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
+
+
+
+
