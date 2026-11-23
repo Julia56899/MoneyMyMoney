@@ -25,7 +25,7 @@ public class Transaction {
     @JoinColumn(name = "category_id")
     private ExpenseCategory category;
     private String description;
-
+//пустой конструктор
     public Transaction() {}
     //контрукторы зис обязательно
     public Transaction(Double sum, String description, LocalDate date, String type, Card card, ExpenseCategory category) {

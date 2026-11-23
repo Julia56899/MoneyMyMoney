@@ -1,5 +1,5 @@
 package com.moneymymoney.transaction;
-
+//данные транзакции
 public class TransactionDTO {
     private Double sum;
     private String description;
